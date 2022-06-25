@@ -97,6 +97,10 @@ public boolean deleteElement(int element){
 
                 switch (childCount){
                     case 0:
+                        if(parent == null){
+                            head = null;
+                            return true;
+                        }
                         if(element>parent.getValue()){
                             parent.setRight(null);
                         } else parent.setLeft(null);
